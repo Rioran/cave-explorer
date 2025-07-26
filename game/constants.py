@@ -1,5 +1,9 @@
+from enum import (
+    IntEnum,
+    auto,
+)
+
 import pygame as pg
-from enum import IntEnum, auto
 
 
 class FOG(IntEnum):

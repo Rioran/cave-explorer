@@ -1,8 +1,8 @@
 import pygame as pg
 
 from constants import (
-    MOVES,
     MOVE_TILES,
+    MOVES,
     TILES,
 )
 

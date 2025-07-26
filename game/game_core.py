@@ -2,15 +2,15 @@ from functools import cache
 
 import pygame as pg
 
+from config import config
 from constants import (
-    SCREEN_SIZE,
-    MOVES,
+    CAPTION,
+    FOG,
     FOG_OFFSET,
     FOG_TILES,
-    FOG,
-    CAPTION,
+    MOVES,
+    SCREEN_SIZE,
 )
-from config import config
 from grid import update_fog
 
 

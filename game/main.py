@@ -1,13 +1,16 @@
 import asyncio
 
-from constants import FPS, INITIAL_TILE_SIZE
 from config import config
+from constants import FPS
 from game_core import (
     initialize_pygame,
     process_events,
     render_game,
 )
-from grid import generate_initial_grid, generate_next_level
+from grid import (
+    generate_initial_grid,
+    generate_next_level,
+)
 from player import Player
 
 

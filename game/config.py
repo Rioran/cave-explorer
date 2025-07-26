@@ -1,12 +1,12 @@
 import pygame as pg
 
 from constants import (
-    MIN_TILE_SIZE,
-    TILE_CHANGE_SIZE,
-    SCREEN_SIZE,
     COLORS,
     INITIAL_TILE_SIZE,
     LIGHT_RADIUS,
+    MIN_TILE_SIZE,
+    SCREEN_SIZE,
+    TILE_CHANGE_SIZE,
 )
 
 

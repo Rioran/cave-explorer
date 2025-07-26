@@ -1,15 +1,19 @@
 from copy import deepcopy
 from math import dist
-from random import randint, shuffle, sample
+from random import (
+    randint,
+    sample,
+    shuffle,
+)
 
+from config import config
 from constants import (
-    TILES,
     FOG,
     LIGHT_RADIUS,
-    POPULATION_PER_SEED,
     MOVES,
+    POPULATION_PER_SEED,
+    TILES,
 )
-from config import config
 
 
 def update_fog(fog, player_row, player_col):
