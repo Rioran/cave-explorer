@@ -1,29 +1,29 @@
 import asyncio
-import sys
 
-import pygame
-
-
-FPS = 25
-SCREEN_SIZE = (1200, 800)
+from constants import FPS, INITIAL_TILE_SIZE
+from config import config
+from game_core import (
+    initialize_pygame,
+    process_events,
+    render_game,
+)
+from grid import generate_initial_grid, generate_next_level
+from player import Player
 
 
 async def main():
-    pygame.init()
-    screen: pygame.Surface = pygame.display.set_mode(SCREEN_SIZE)
-    clock = pygame.time.Clock()
+    screen, clock = initialize_pygame()
+    grid, fog, position = generate_initial_grid()
+    player = Player(*position)
 
-    screen.fill('aquamarine')  # https://www.pygame.org/docs/ref/color_list.html
-    pygame.display.update()
+    while process_events(player, grid, fog):
+        render_game(screen, grid, fog)
 
-    while True:
-        for event in pygame.event.get():
-            if not event.type == pygame.KEYUP:
-                continue
-
-            if event.key == pygame.K_ESCAPE:
-                pygame.quit()
-                sys.exit()
+        if player.win:
+            config.advance_difficulty()
+            grid, fog, position = generate_next_level()
+            player.set_position(*position)
+            player.win = False
 
         clock.tick(FPS)
         await asyncio.sleep(0)

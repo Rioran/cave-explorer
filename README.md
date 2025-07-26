@@ -1,6 +1,15 @@
-# PYGAME+PYGBAG template
+# Cave Explorer
 
-A working template to start coding. Just a colored screen and some infrastructure.
+PyGame + PyGbag PC game.
+
+### features
+
+- WASD motion controls, long-press enabled
+- ESC to quit
+- Fog of war hides the map
+- Player spreads light in a small radius
+- Stepping into a new cave increases map scale
+- Caves are auto-generated
 
 ### deploy virtual environment
 
