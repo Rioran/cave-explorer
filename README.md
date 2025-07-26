@@ -1,6 +1,10 @@
 # Cave Explorer
 
+![Game Screenshot](static/game-shot.png)
+
 PyGame + PyGbag PC game.
+
+Hosted on https://rioran.github.io/cave-explorer/web/
 
 ### features
 
